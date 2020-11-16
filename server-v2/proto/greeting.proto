@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package domain;
+
+service HelloService {
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+// Version 2
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string greeting = 1;
+    string hidden_message = 2;
+}
